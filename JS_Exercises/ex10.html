@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>toCamelCase</title>
+  </head>
+  <body>
+    <p id="A" style="font-size: 40px;color:darkblue ;"></p>
+    <script>
+      function toCamelCase(inputStr) {
+        const words = inputStr.split(" ");
+        const firstWord = words[0].toLowerCase();
+        const camelCase = [firstWord];
+        for (let i = 1; i < words.length; i++) {
+          camelCase.push(
+            words[i][0].toUpperCase() + words[i].substring(1).toLowerCase()
+          );
+        }
+        return camelCase.join("");
+      }
+
+      const inputStr = prompt("Enter a string:");
+      const camelCaseStr = toCamelCase(inputStr);
+      document.getElementById("A").innerHTML = "The CamelCase string is: "+camelCaseStr;
+    </script>
+  </body>
+</html>

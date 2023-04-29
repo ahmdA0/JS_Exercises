@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculate the Age</title>
+  </head>
+  <body>
+    <script>
+      function calculateAge() {
+        const birthYear = prompt("Enter the year you birth :");
+        const birthMonth = prompt("Enter the month you birth :");
+        const birthDay = prompt("Enter the day you birth :");
+
+        const today = new Date();
+        const birthDate = new Date(`${birthYear}-${birthMonth}-${birthDay}`);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+
+        if ((monthDiff < 0) ||(monthDiff === 0 && today.getDate() < birthDate.getDate()))
+          age--;
+        return age;
+      }
+      const age = calculateAge();
+      console.log(`The age is :${age}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Split String into Words</title>
+  </head>
+  <body>
+    <p id="A" style="font-size: 40px;color: bisque;"></p>
+    <script>
+      let string = prompt("Enter the sentence whose words you want to split");
+      function splitIntoWords(str) {
+        let words = str.split(" ");
+        return words;
+      }
+      document.getElementById("A").innerHTML = "In the Console :)";
+      console.log(splitIntoWords(string));
+    </script>
+  </body>
+</html>

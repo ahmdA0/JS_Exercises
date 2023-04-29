@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slice an Array</title>
+  </head>
+  <body>
+    <p id="A" style="font-size: 30px;color: rgb(111, 103, 92);"></p>
+    <p id="B" style="font-size: 30px;color: rgb(180, 147, 101);"></p>
+    <script>
+      const startIndex = prompt("Enter start index (Between 1 - 9)");
+      const endIndex = prompt("Enter end index (Between 1 - 9) ");
+      function sliceArray(arr, startIndex, endIndex) {
+        return arr.slice(startIndex, endIndex + 1);
+      }
+      let arr = ["White", "Green", "Yallow", "Black", "Red", "Orange", "Cayn", "Teal", "Blue"];
+      let array = arr;
+      let sliceArr = sliceArray(arr, startIndex, endIndex);
+      document.getElementById("A").innerHTML = "Array before sliceling : "+array;
+      document.getElementById("B").innerHTML = "Array after slicing : "+sliceArr;
+    </script>
+  </body>
+</html>

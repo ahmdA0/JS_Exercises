@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anagrams</title>
+  </head>
+  <body>
+    <p id="A" style="font-size: 40px;color: blue;"></p>
+    <script>
+      let Str1 = prompt("Enter the first string:");
+      let Str2 = prompt("Enter the second string:");
+      function checkStringsAnagram(a, b) {
+        let len1 = a.length;
+        let len2 = b.length;
+        if (len1 !== len2) {
+          console.log("False");
+          return;
+        }
+        let str1 = a.split("").sort().join("");
+        let str2 = b.split("").sort().join("");
+        if (str1 === str2) {
+            document.getElementById("A").innerHTML = "True";
+        } else {
+            document.getElementById("A").innerHTML = "False";
+        }
+      }
+      checkStringsAnagram(Str1,Str2);
+    </script>
+  </body>
+</html> 

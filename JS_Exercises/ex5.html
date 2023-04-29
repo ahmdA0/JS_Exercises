@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validating Email Address</title>
+  </head>
+  <body>
+    <p id="A" style="font-size: 40px; color: brown;"></p>
+    <script>
+      function isValidEmail(email) {
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      let email = prompt("Enter email address:");
+      let isValid = isValidEmail(email);
+    document.getElementById("A").innerHTML = isValid;
+    </script>
+  </body>
+</html>
